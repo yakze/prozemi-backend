@@ -110,9 +110,15 @@
             if (currentVrm) {
                 
 
-                currentVrm.humanoid.getNormalizedBoneNode( 'rightUpperArm' ).rotation.z = -0.75;
-                currentVrm.humanoid.getNormalizedBoneNode( 'leftUpperArm' ).rotation.z = 0.75;
-
+       {
+ leftUpperLeg : {
+   rotation: [  0.000,  0.000, -0.454,  0.891 ],
+   position: [  0.000,  0.000,  0.000 ]
+ },
+ leftLowerLeg : {
+   rotation: [ -0.454,  0.000,  0.000,  0.891 ]
+ },
+}
                 currentVrm.expressionManager.setValue('happy', 1.0);
                 currentVrm.expressionManager.update();
                 currentVrm.update( deltaTime );
